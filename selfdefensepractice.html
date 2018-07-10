@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <!-- <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+ <meta http-equiv="x-ua-compatible" content="IE=Edge" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ 
+
+
+ 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script> 
+    <script type="text/javascript" src="selfdefensepractice.js"></script> 
+
+   <!-- Bootstrap -->
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+<!-- Firebase Reference -->
+   <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+   <!-- link to bing api -->
+   <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AtWGzSZzYAbAlhjEmb08RxN24XFyXSfue2jfGSvj1WUbFmzZW79PmyDUc7hEmkj9" async defer></script>
+
+<!-- Link to Moment.js should go here -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+ <title>Practice Page</title>
+</head>
+
+<body>
+
+       <div class="jumbotron">
+               <div class="container">
+                 <h1>Self-Defense Techniques for Every Woman</h1>
+                   <h2>Check out different types of self-defense techniques</h2>
+                   <h2>There's something for everyone - and you can find a class nearby for what you like!</h2>
+                   <h3>We want to empower women to look after themselves and not be a victim. We offer a variety of resources to help you feel confident standing up for yourself.</h3>
+               </div>
+             </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Taekwondo</h1>
+                        <p>A blend of Karate and Chinese Martial Arts, Taekwondo originated in Korea. It focuses on speed and agility and helps strengthen your core. It also helps with flexibility as the techniques require you to torque your lower body when kicking. Apart from the obvious benefits, you'll also sculpt a rock hard body and we guarantee you that most rapists and the like will not want to mess with you once they get a glimpse of those biceps.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/etgxusKS0Do" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <br>
+                        <div id="myMap" style='position:relative;width:600px;height:400px;'>My Map!</div>
+                        <button type="findClass" id="findClass" class="btn btn-default">Find Classes Near You!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+       </div>
+     
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Judo</h1>
+                        <p>Judo dates back to 1882 and originated in Japan. It is an extremely useful martial art as the aim in judo is to toss your opponent to the ground in the most violent way possible. In fact, a lot of judo competitors have suffered broken ribs because they were thrown with that much force. Judo also teaches you various submissions such as arm-locks, chokes and many more and will help you incapacitate your attacker.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nWKXTG12dnE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <button type="findClass" id="findClass" class="btn btn-default">Find Classes Near You!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+       </div>
+
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Karate</h1>
+                        <p>Karate uses a lot of straight punches and kicks to break down opponents defences and allow you to land with frightening accuracy. In fact, one of the best fighters on the planet, the UFC's Georges St Pierre is a Karate black belt. It teaches you to land punches and kicks without sacrificing your distance management. And apart from self-defence, it also helps with weight loss and stress reduction.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/T-iwbqyg2dU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <button type="findClass" id="findClass" class="btn btn-default">Find Classes Near You!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+       </div>
+
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Krav Maga</h1>
+                        <p>Krav Maga is a brutal martial art that teaches you to use anything around you as a weapon. Be it a pen or a frying pan, you're going to have to use it to batter your foe. It stresses on conditioning and spatial awareness so that when you are cornered you'll have the confidence to break some fools face.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xw-8_UTJo2Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <button type="findClass" id="findClass" class="btn btn-default">Find Classes Near You!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+       </div>
+
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Muay Thai</h1>
+                        <p>Muay Thai is also known as the art of eight limbs because you use your fists, feet, knees and elbows to inflict a ton of damage. Known for their resilience and sheer toughness, the people of Thailand developed Muay Thai after noticing that the previous style, 'Muay Boran', was a little to brutal with even headbutts thrown in the mix. Muay Thai has now been refined into a martial art that all professional fighters include in their arsenal.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vmWDU4xkII8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <button type="findClass" id="findClass" class="btn btn-default">Find Classes Near You!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+       </div>
+
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1>Brazilian-Jiu-Jitsu</h1>
+                        <p>Brazilian Jiu Jitsu is a martial art that doesn't require you to be a professional bodybuilder to get good at. By using leverage and technique, a smaller person can incapacitate a much larger attacker. This martial art uses arm-locks, knee-locks, foot-locks and a lot of chokes to make it one of the, if not, the most effective martial art there is today. In fact, back in 1993, when the UFC (Ultimate Fighting Championships) was first organized, the person to win the whole thing was a Brazilian Jiu Jitsu black belt.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pndPbpHLpos" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <button type="findClass" id="findClass" class="btn btn-default">Find Classes Near You!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+       </div>
+
+
+
+
+
+   <div class="container1">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 form-border">
+        <div class="row form-border">
+            <div class="col-sm-12">
+                <h2>Sign up to stay up-to-date on techniques!</h2>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            <form action="/action_page.php">
+                 <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="firstName" class="form-control" id="firstName-input" name="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="lastName" class="form-control" id="lastName-input" name="lastName">
+                  </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email-input" name="email">
+                </div>
+                <button type="submit" id="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+        </div>
+        </div>
+    </div>
+          </div>
+
+          <!-- <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script> -->
+
+          <!-- link to bing api -->
+   <!-- <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AtWGzSZzYAbAlhjEmb08RxN24XFyXSfue2jfGSvj1WUbFmzZW79PmyDUc7hEmkj9' async defer></script> -->
+
+ <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery.js"></script><!-- JavaScript
+            <!-- <script src="self-defense.js"></script> -->
+            <!-- <script src="selfdefensepractice.js"></script> --> -->
+
+
+   </body>
+   
+   </html>

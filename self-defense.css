@@ -1,0 +1,52 @@
+.container3 {
+    background-image: url("womenfighting.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+    height: 100%;
+    /* margin-bottom: 50px; */
+    color: whitesmoke;
+}
+
+h1, h2, h3 {
+    font-family: 'Comfortaa', cursive;
+    /* font-weight:800; */
+}
+
+h1 {
+    text-shadow: 4px 4px #ef5350;
+    font-weight:800;
+}
+
+h3 {
+    text-align: center;
+}
+
+body {
+    background-image: url("nasty_fabric.png");
+}
+
+form {
+    background-color: white;
+    border: 2px solid lightgray;
+}
+
+.container1 {
+    margin: 25px;
+    padding: 25px;
+}
+
+
+.container {
+    margin-bottom: 75px;
+}
+
+#signupform {
+    display: none;
+}
+
+
+.banner-background {
+    background-image: url("dust_scratches.png");
+    padding: 25px;
+}

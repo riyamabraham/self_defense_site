@@ -2,7 +2,6 @@
 app that helps women find self-defense classes nearby
 
 **  The page is designed to look like a real application where
-    
     user can see different self defense techniques for women.
 
 **  Videos are uploaded in the page using YOUTUBE'S API so that 

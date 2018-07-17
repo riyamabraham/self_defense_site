@@ -27,6 +27,74 @@
 
 <body>
 
+
+    <!-- for the scroll to topFunction -->
+
+    <div class="top">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- scroll to top ending -->
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large black">
+            <i class="large material-icons">notifications</i>
+        </a>
+        <ul>
+            <li>
+
+                <a href="https://mail.google.com" class="btn-floating">
+                    <img src="assets/images/mail.jpg" height="40" width="40">
+                </a>
+
+            </li>
+            <li>
+
+                <a href="https://twitter.com" class="btn-floating">
+                    <img src="assets/images/twitter.jpg" height="40" width="40">
+                </a>
+
+            </li>
+            <li>
+
+                <a href="https://facebook.com" class="btn-floating">
+                    <img src="assets/images/facebook.png" height="40" width="40">
+                </a>
+
+            </li>
+            <li>
+
+                <a href="https://linkedin.com" class="btn-floating">
+                    <img src="assets/images/linkedin.png" height="40" width="40">
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+
+
+
     <div class="container2">
 
 
@@ -34,8 +102,24 @@
             <div class="row">
                 <div class="col s12 valign-wrapper">
                     <h1>Badass Self-Defense Techniques</h1>
-                    <br> <br><br><br><br><br><br><br><br>
-                    <br><br><br><br><br><br><br><br><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -69,19 +153,27 @@
                 </div>
             </nav>
 
-        <div class="banner-background">        
-            <h3>We want to empower women to look after themselves and not be a victim. We offer a variety of resources to help
-                you feel confident standing up for yourself.</h3>
-        </div>
+            <div class="banner-background">
+                <h3>We want to empower women to look after themselves and not be a victim. We offer a variety of resources to
+                    help you feel confident standing up for yourself.</h3>
+            </div>
         </div>
 
-        <br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
         <div class="container">
 
+
             <div class="row dust">
-                <div class="col s3"></div>
+                <div class="col s3">
+
+
+                </div>
+
                 <div class="col sm12 z-depth-4">
                     <a id="taekwondo-info"></a>
                     <div class="card sticky-action">
@@ -117,9 +209,10 @@
                         <div class="vidContent" id="tkVids"></div>
                     </div>
                 </div>
+
                 <div class="col s3"></div>
             </div>
-           
+
             <br>
             <br>
             <br>
@@ -144,7 +237,7 @@
                                     </a>
                                 </i>
                             </span>
-                            <button data-toggle="tooltip" title="Click here to see classes for this Judo"type="submit" id="Judo" class="waves-effect waves-light btn">
+                            <button data-toggle="tooltip" title="Click here to see classes for this Judo" type="submit" id="Judo" class="waves-effect waves-light btn">
                                 Find Classes Near You!
                             </button>
                             <button type="submit" class="waves-effect waves-light btn" data-state="off" data-name="UCUgIqptHreGZj-QYv4GYamw">
@@ -319,11 +412,12 @@
                                     </a>
                                 </i>
                             </span>
-                            <button data-toggle="tooltip" title="Click here to see classes for this Brazilian-Jiu-Jitsu" type="submit" id="Brazilian-Jiu-Jitsu" class="waves-effect waves-light btn">
+                            <button data-toggle="tooltip" title="Click here to see classes for this Brazilian-Jiu-Jitsu" type="submit" id="Brazilian-Jiu-Jitsu"
+                                class="waves-effect waves-light btn">
                                 Find Classes Near You!
                             </button>
                             <button type="submit" class="waves-effect waves-light btn" data-state="off" data-name="StephanKesting">
-                                <i data-toggle="tooltip" title="Click here for more videos" class=" material-icons">ondemand_video</i> 
+                                <i data-toggle="tooltip" title="Click here for more videos" class=" material-icons">ondemand_video</i>
                             </button>
                         </div>
                         <div class="card-reveal">
@@ -382,7 +476,7 @@
                 </form>
                 <div class="col s3"></div>
             </div>
-            
+
 
         </div>
     </div>
@@ -390,101 +484,8 @@
     </form>
     </div>
 
+
+
 </body>
 
 </html>
-
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- JavaScript -->
-<script src="self-defense.js"></script>
-
-<!-- link to bing api -->
-<!-- <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AtWGzSZzYAbAlhjEmb08RxN24XFyXSfue2jfGSvj1WUbFmzZW79PmyDUc7hEmkj9' async defer></script> -->
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- JavaScript -->
-<script src="self-defense.js"></script>
-<!-- <script src="selfdefensepractice.js"></script> -->
-<!--<script src="self-defense.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-<script src="assets/javascript/youtubeapi.js"></script>
-<script src="assets/javascript/audio.js"></script>
-<script>
-
-    /*---------------------------------------------------- */
-    //            FireBase For Sign Up Form                //
-    /*---------------------------------------------------- */
-
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDEbvDMPLX7OhIvUX_aVoRD3r0NYg2y8_A",
-        authDomain: "project1-eb9b4.firebaseapp.com",
-        databaseURL: "https://project1-eb9b4.firebaseio.com",
-        projectId: "project1-eb9b4",
-        storageBucket: "project1-eb9b4.appspot.com",
-        messagingSenderId: "331878755433"
-    };
-    firebase.initializeApp(config);
-
-    var database = firebase.database();
-
-    $("#submit-form-btn").on("click", function (event) {
-        event.preventDefault();
-
-        var firstName = $("#firstName-input").val().trim();
-        var lastName = $("#lastName-input").val().trim();
-        var email = $("#email-input").val().trim();
-
-        var newPerson = {
-            fullName: firstName + lastName,
-            firstName: firstName,
-            lastName: lastName,
-            email: email
-        }
-
-        database.ref().push(newPerson);
-
-        $("#firstName-input").val("");
-        $("#lastName-input").val("");
-        $("#email-input").val("");
-    })
-    /*---------------------------------------------------- */
-    //            END FireBase For Sign Up Form            //
-    /*---------------------------------------------------- */
-
-    /*---------------------------------------------------- */
-    //            Bing API                                 //
-    /*---------------------------------------------------- */
-
-    var urlFormat = 'http://dev.virtualearth.net/REST/v1/Locations?query="';
-    var apiKey = 'AkIgxfXpNvZhot50cFWwIqPh-FFZluPze7WW1iVKhScPaDPqTd04fjlrTOaKQuXu';
-
-    $('#taekwondoBtn').on('click', function (event) {
-        event.preventDefault();
-        console.log("hi");
-
-        //var searchTerm = searchField.val();
-        var queryURL = urlFormat + 'taekwondoevanston' + '&jsonp=GeocodeCallback&key=' + apiKey;
-
-        $.ajax({
-            url: queryURL,
-            method: "GET",
-            accepts: 'json',
-
-        }).then(function (response) {
-            console.log(response);
-
-
-        }).fail(function (err) { console.log(err) });
-    });
-
-
-
-
-</script>

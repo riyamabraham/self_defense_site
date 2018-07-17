@@ -3,20 +3,41 @@ var config = {
     authDomain: "project1-575d7.firebaseapp.com",
     databaseURL: "https://project1-575d7.firebaseio.com",
     projectId: "project1-575d7",
-    storageBucket: "",
+    storageBucket: "project1-575d7.appspot.com",
     messagingSenderId: "1048705115345"
 };
 firebase.initializeApp(config);
-// Create a variable to reference the database.
+
+
 var database = firebase.database();
 
-var firstName = "";
-var lastName = "";
-var email = "";
+$("#submit-form-btn").on("click", function (event) {
+    event.preventDefault();
+
+    var firstName = $("#firstName-input").val().trim();
+    var lastName = $("#lastName-input").val().trim();
+    var email = $("#email-input").val().trim();
+
+    var newPerson = {
+        fullName: firstName + lastName,
+        firstName: firstName,
+        lastName: lastName,
+        email: email
+    }
+
+    database.ref().push(newPerson);
+
+    $("#firstName-input").val("");
+    $("#lastName-input").val("");
+    $("#email-input").val("");
+});
+
+
+
 $(document).ready(function () {
 
 
-    $("#formregister").on("click",function(event){
+    $("#formregister").on("click", function (event) {
         $("#signupform").toggle('slow');
     });
 
@@ -59,27 +80,38 @@ $(document).ready(function () {
 
 
 /******************************* */
-$("#Taekwondo").on("click",function(event){
+$("#Taekwondo").on("click", function (event) {
     console.log("hi");
-    location.href = "page1.html";
+    //var queryString = 'taekwondo';
+    location.href = "page1.html?term=taekwondo";
 });
-$("#Judo").on("click",function(event){
+$("#Judo").on("click", function (event) {
     console.log("hi");
-    location.href = "page2.html";
+    location.href = "page1.html?term=judo";
 });
-$("#Karate").on("click",function(event){
+$("#Karate").on("click", function (event) {
     console.log("hi");
-    location.href = "page3.html";
+    location.href = "page1.html?term=karate";
 });
-$("#KravMaga").on("click",function(event){
+$("#KravMaga").on("click", function (event) {
     console.log("hi");
-    location.href = "page4.html";
+    location.href = "page1.html?term=kravmaga";
 });
-$("#MuayThai").on("click",function(event){
+$("#MuayThai").on("click", function (event) {
     console.log("hi");
-    location.href = "page5.html";
+    location.href = "page1.html?term=muaythai";
 });
-$("#Brazilian-Jiu-Jitsu").on("click",function(event){
+$("#Brazilian-Jiu-Jitsu").on("click", function (event) {
     console.log("hi");
-    location.href = "page6.html";
+    location.href = "page1.html?term=brazilian-jiu-jitzu";
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'right'
+    });
+  });
